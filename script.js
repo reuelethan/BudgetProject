@@ -67,8 +67,9 @@ function display() {
     newEntry.innerHTML = `
       <p>Item: ${expense.item}</p>
       <p>Price: ${expense.price}</p>`;
-    total = earned.value -= expense.price;
+
     document.querySelector(".expenseLog").appendChild(newEntry);
+    total = earned.value -= expense.price;
     document.querySelector(".balanceLog").innerHTML = `<div>$${total}</div>`;
   });
 }
