@@ -57,9 +57,10 @@
               <option id="bills" value="Bills">Bills</option>
             </select>
 
-            <input class="Items" placeholder="Name of Item" />
+            <input name="Item" class="items" placeholder="Name of Item" />
             <input
-              id="itemsPrice"
+              name="Price"
+              id="Price"
               type="number"
               class="itemsPrice"
               placeholder="Price of Item"
@@ -78,12 +79,12 @@
         <div class="expenses">
           <i class="fas fa-money-bill-wave-alt"></i>
           <h3>EXPENSES</h3>
+          <section class="expenseLog"></section>
         </div>
 
         <div class="balance">
           <i class="fas fa-dollar-sign"></i>
           <h3>BALANCE</h3>
-          <section class="expenseLog"></section>
         </div>
       </div>
     </section>

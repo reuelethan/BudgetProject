@@ -33,26 +33,48 @@ document
   });
 
 //logs prices of items
-items = document.querySelector("#Items");
-price = document.querySelector("#itemsPrice");
+items = document.querySelector(".items");
+price = document.querySelector(".itemsPrice");
 document
   .querySelector("#data")
   .addEventListener("submit", function expenseData(event) {
     event.preventDefault();
     document.querySelector(
       ".expenseLog"
-    ).innerHTML = `<div>${price.value}</div>`;
+    ).innerHTML = `<div>${price.value} ${items.value}</div>`;
     console.log(price.value);
 
-    function display(expenseListReference) {
+    function print(expenseListReference) {
       expenseListReference.expenses.forEach(expense => {
         console.log(expense);
       });
     }
 
     const expenseList = new Expenses();
-    expenseList.add("Mitch", "mitch@grandcircus.co");
-    expenseList.add("Tyler", "tyler@email.com");
-    expenseList.add("John", "john@email.com");
-    display(expenseList);
+    // expenseList.add("Mitch", "mitch@grandcircus.co");
+    // expenseList.add("Tyler", "tyler@email.com");
+    // expenseList.add("John", "john@email.com");
+    print(expenseList);
   });
+
+function display() {
+  document.querySelector(".expenseLog").innerHTML = "";
+  Expenses.expenses.forEach((expense, index) => {
+    const newEntry = document.createElement("div");
+    newEntry.classList.add("expenseLogItem");
+    newEntry.innerHTML = `
+      <p>Item: ${expense.item}</p>
+      <p>Price: ${expense.price}</p>`;
+    document.querySelector(".expenseLog").appendChild(newEntry);
+  });
+}
+display();
+const form = document.querySelector("#data");
+form.addEventListener("submit", addItem);
+function addItem(event) {
+  e.preventDefault();
+  const itemData = new FormData(form);
+  expenseList.add(itemData.get("Price"), itemData.get("Item"));
+  form.reset();
+  display();
+}
