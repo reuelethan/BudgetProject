@@ -1,0 +1,255 @@
+HMTL
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Can I Afford?</title>
+  </head>
+  <body>
+    <!----------------------- / Title / ----------------->
+    <h1>CAN YOU AFFORD IT??</h1>
+    <!-------------------- / Section / ------------------>
+    <section class="main">
+      <!------------ Display Weekly Budget  ------------->
+      <div class="displayWeeklyBudget">
+        <h2>WEEKLY BUDGET</h2>
+        <!----------------------- / Form 1 / ------------>
+        <form id="earned">
+          <input
+            type="number"
+            id="earnings"
+            placeholder="Enter your weekly earnings"
+          />
+          <input id="submit" class="goButton" type="submit" value="Submit🤑"  />
+        </form>
+        <!----------------- / Budget / ----------------->
+        <div class="weeklyBudget">Your Number Goes Here</div>
+      </div>
+      <!----------------- divider ---------------------->
+      <div class="downContainer Rew">
+        <select class="dropDownContent">
+          <option id="placeholder" value="placeholder"
+            >Select a Category</option
+          >
+          <option id="entertainment" value="Entertainment"
+            >Entertainment</option
+          >
+          <option id="food" value="Food">Food</option>
+          <option id="clothing" value="Clothing">Clothing</option>
+          <option id="bills" value="Bills">Bills</option>
+        </sele
+        ct>
+        <input class="Items" placeholder="Name of Item" />
+        <input type="number" class="Items" placeholder="Price of Item" />
+      </div>
+
+      <div class="i"><i class="fas fa-plus "></i></div>
+
+      <div class="reciept"></div>
+    </section>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/65d69f953c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+css
+
+body {
+    background-image: url(https://images.pexels.com/photos/302842/pexels-photo-302842.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+
+
+}
+
+h1 {
+    font-size: 54px;
+    text-align: center;
+    font-family: 'Staatliches';
+    color: #0db666;
+}
+
+h2 {
+    margin: 0px;
+    color: #0db666;
+}
+
+.displayWeeklyBudget {
+    background-color: rgb(216, 216, 216);
+    text-align: center;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border-radius: 10px;
+    font-family: 'Staatliches';
+    border: #baafad 1px solid;
+}
+
+.goButton {
+    font-family: 'Staatliches';
+    background-color: honeydew;
+}
+
+.weeklyBudget {
+    background-color: rgb(140, 224, 151);
+    font-size: 19px;
+    color: white;
+    width: 70%;
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-top: 7px;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-top: 7px;
+}
+
+.dropDownContent {
+    width: 70%;
+    height: 50%;
+    font-size: 20px;
+    display: block;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Patua One', cursive;
+    text-align-last: center;
+}
+
+.downContainer {
+    background-color: rgb(216, 216, 216);
+    text-align: center;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border-radius: 10px;
+    font-family: 'Staatliches';
+    margin-top: 10px;
+    border: #baafad 1px solid;
+}
+
+.Items {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    height: 50%;
+    margin-top: 5px;
+}
+
+#earnings {
+    position: relative;
+    bottom: px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    height: 50%;
+    font-size: 13px;
+}
+
+.i {
+    width: 100px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+}
+
+.reciept {
+    background-color: rgb(216, 216, 216);
+    width: 70%;
+    height: 20%;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-image: url(https://images.pexels.com/photos/302842/pexels-photo-302842.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+
+
+    }
+
+    h1 {
+        font-size: 54px;
+        text-align: center;
+        font-family: 'Staatliches';
+    }
+
+    .displayWeeklyBudget {
+
+        text-align: center;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        border: #baafad 1px solid;
+    }
+
+    .weeklyBudget {
+        background-color: rgb(140, 224, 151);
+        width: 100%;
+        height: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 15px;
+
+    }
+
+    .goButton {
+        font-family: 'Staatliches';
+    }
+
+    .dropDownContent {
+        width: 200px;
+        height: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .downContainer {
+        padding: 10px;
+    }
+
+
+}
+
+script
+
+document.querySelector(".weeklyBudget").innerHTML = `
+<div class="weeklybudget"> Number Goes Here
+</div> `;
+
+
+//test 2//
+let earned = (document.querySelector("#earnings"));
+document.querySelector("#earned").addEventListener("submit", function budgetValue(e) {
+    console.log(earned.value);
+    document.querySelector(".weeklyBudget").innerHTML = (`$${earned.value}`);
+    e.preventDefault();
+
+})

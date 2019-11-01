@@ -1,0 +1,26 @@
+      bodyEl.innerHTML += `
+            <article>
+            <header class="title">${children[index].data.title}</header>
+            <br> 
+            <img src="${children[index].data.thumbnail}">
+            <br>
+            <p> Link is ${children[index].data.url} </p>
+            </article>
+            
+            
+            `;
+    }
+
+
+             name of button goes here
+    document.querySelector(".addbutton")
+    .addEventListener("click", function(event) {
+      event.preventDefault();
+      addressBook.contacts.push(
+        new Contact(
+          document.querySelector("#name").value,
+          document.querySelector("#email").value,
+          document.querySelector("select").value,
+          document.querySelector("#number").value
+        )
+      );
