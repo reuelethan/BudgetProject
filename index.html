@@ -1,62 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Patua+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Can I Afford?</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Can I Afford?</title>
-</head>
+  <body>
+    <!----------------------- / Title / ----------------->
+    <h1>CAN YOU AFFORD IT?</h1>
+    <!-------------------- / Section / ------------------>
+    <section class="main">
+      <!------------ Display Weekly Budget  ------------->
+      <div class="container">
+        <div class="displayWeeklyBudget">
+          <h2>WEEKLY BUDGET</h2>
+          <!----------------------- / Form 1 / ------------>
+          <form id="earned">
+            <input
+              type="number"
+              id="earnings"
+              placeholder="Whats Your Budget?"
+            />
+            <input
+              id="submit"
+              class="goButton"
+              type="submit"
+              value="Submit🤑"
+            />
+          </form>
+          <!----------------- / Budget / ----------------->
+          <div class="weeklyBudget">Your Number Goes Here</div>
+        </div>
+        <!----------------- divider ---------------------->
+        <div class="downContainer Rew">
+          <form id="data">
+            <select class="dropDownContent">
+              <option id="placeholder" value="placeholder"
+                >Select a Category</option
+              >
+              <option id="entertainment" value="Entertainment"
+                >Entertainment</option
+              >
+              <option id="food" value="Food">Food</option>
+              <option id="clothing" value="Clothing">Clothing</option>
+              <option id="bills" value="Bills">Bills</option>
+            </select>
 
-<body>
-  <!----------------------- / Title / ----------------->
-  <h1>CAN YOU AFFORD IT?</h1>
-  <!-------------------- / Section / ------------------>
-  <section class="main">
-    <!------------ Display Weekly Budget  ------------->
-    <div class="container">
-      <div class="displayWeeklyBudget">
-        <h2>WEEKLY BUDGET</h2>
-        <!----------------------- / Form 1 / ------------>
-        <form id="earned">
-          <input type="number" id="earnings" placeholder="Whats Your Budget?" />
-          <input id="submit" class="goButton" type="submit" value="Submit🤑" />
-        </form>
-        <!----------------- / Budget / ----------------->
-        <div class="weeklyBudget">Your Number Goes Here</div>
+            <input class="Items" placeholder="Name of Item" />
+            <input
+              id="itemsPrice"
+              type="number"
+              class="itemsPrice"
+              placeholder="Price of Item"
+            />
+            <input
+              class="goButton"
+              id="btnsubmit"
+              type="submit"
+              value="submit"
+            />
+          </form>
+        </div>
       </div>
-      <!----------------- divider ---------------------->
-      <div class="downContainer Rew">
-        <select class="dropDownContent">
-          <option id="placeholder" value="placeholder">Select a Category</option>
-          <option id="entertainment" value="Entertainment">Entertainment</option>
-          <option id="food" value="Food">Food</option>
-          <option id="clothing" value="Clothing">Clothing</option>
-          <option id="bills" value="Bills">Bills</option>
-          </sele ct>
-          <input class="Items" placeholder="Name of Item" />
-          <input type="number" class="Items" placeholder="Price of Item" />
-      </div>
-    </div>
 
-    <div class= "container2">
-      <div class="expenses">
-        <i class="fas fa-money-bill-wave-alt"></i>
-        <h3>EXPENSES</h3>
-      </div>
-      
-      <div class= "balance">
-        <i class="fas fa-dollar-sign"></i>
-        <h3>BALANCE</h3>
-      </div>
-      
-    </div>
-  </section>
-  <script src="script.js"></script>
-  <script src="https://kit.fontawesome.com/65d69f953c.js" crossorigin="anonymous"></script>
-</body>
+      <div class="container2">
+        <div class="expenses">
+          <i class="fas fa-money-bill-wave-alt"></i>
+          <h3>EXPENSES</h3>
+        </div>
 
+        <div class="balance">
+          <i class="fas fa-dollar-sign"></i>
+          <h3>BALANCE</h3>
+          <section class="expenseLog"></section>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/65d69f953c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
